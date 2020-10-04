@@ -21,28 +21,28 @@ class ButtonTestPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ButtonComparison(
-                  style: ButtonStyle.whiteOutline,
-                  type: ButtonType.signIn,
+                  style: ASIButtonStyle.whiteOutline,
+                  type: ASIButtonType.signIn,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.black,
-                  type: ButtonType.signIn,
+                  style: ASIButtonStyle.black,
+                  type: ASIButtonType.signIn,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.white,
-                  type: ButtonType.signIn,
+                  style: ASIButtonStyle.white,
+                  type: ASIButtonType.signIn,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.whiteOutline,
-                  type: ButtonType.continueButton,
+                  style: ASIButtonStyle.whiteOutline,
+                  type: ASIButtonType.continueButton,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.black,
-                  type: ButtonType.continueButton,
+                  style: ASIButtonStyle.black,
+                  type: ASIButtonType.continueButton,
                 ),
                 ButtonComparison(
-                  style: ButtonStyle.white,
-                  type: ButtonType.continueButton,
+                  style: ASIButtonStyle.white,
+                  type: ASIButtonType.continueButton,
                 ),
               ],
             ),
@@ -54,8 +54,8 @@ class ButtonTestPage extends StatelessWidget {
 }
 
 class ButtonComparison extends StatelessWidget {
-  final ButtonStyle style;
-  final ButtonType type;
+  final ASIButtonStyle style;
+  final ASIButtonType type;
 
   ButtonComparison({@required this.style, @required this.type});
 

@@ -25,10 +25,10 @@
         
         _viewId = viewId;
         
-        ASAuthorizationAppleIDButtonType buttonType = [self buttonTypeFromString:args[@"buttonType"]];
-        ASAuthorizationAppleIDButtonStyle buttonStyle = [self buttonStyleFromString:args[@"buttonStyle"]];
-        _button = [ASAuthorizationAppleIDButton buttonWithType:buttonType
-                                                         style:buttonStyle];
+        ASAuthorizationAppleIDButtonType asiButtonType = [self buttonTypeFromString:args[@"asiButtonType"]];
+        ASAuthorizationAppleIDButtonStyle asiButtonStyle = [self buttonStyleFromString:args[@"asiButtonStyle"]];
+        _button = [ASAuthorizationAppleIDButton buttonWithType:asiButtonType
+                                                         style:asiButtonStyle];
         
         _button.frame = frame;
         _button.enabled = [args[@"enabled"] boolValue];
@@ -49,12 +49,12 @@
     [_channel invokeMethod:@"onTapped" arguments:nil];
 }
 
-- (ASAuthorizationAppleIDButtonType)buttonTypeFromString:(NSString*)buttonType {
-    if ([buttonType isEqualToString:@"ButtonType.continueButton"]) {
+- (ASAuthorizationAppleIDButtonType)buttonTypeFromString:(NSString*)asiButtonType {
+    if ([buttonType isEqualToString:@"ASIButtonType.continueButton"]) {
         return ASAuthorizationAppleIDButtonTypeContinue;
     }
     
-    if ([buttonType isEqualToString:@"ButtonType.signIn"]) {
+    if ([buttonType isEqualToString:@"ASIButtonType.signIn"]) {
         return ASAuthorizationAppleIDButtonTypeSignIn;
     }
     
@@ -63,12 +63,12 @@
 }
 
 
-- (ASAuthorizationAppleIDButtonStyle)buttonStyleFromString:(NSString*)buttonStyle {
-    if ([buttonStyle isEqualToString:@"ButtonStyle.white"]) {
+- (ASAuthorizationAppleIDButtonStyle)buttonStyleFromString:(NSString*)asiButtonStyle {
+    if ([asiButtonStyle isEqualToString:@"ASIButtonStyle.white"]) {
         return ASAuthorizationAppleIDButtonStyleWhite;
     }
     
-    if ([buttonStyle isEqualToString:@"ButtonStyle.whiteOutline"]) {
+    if ([asiButtonStyle isEqualToString:@"ASIButtonStyle.whiteOutline"]) {
         return ASAuthorizationAppleIDButtonStyleWhiteOutline;
     }
     

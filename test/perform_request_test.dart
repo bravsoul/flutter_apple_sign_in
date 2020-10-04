@@ -6,6 +6,7 @@ import 'package:apple_sign_in/open_id_operation.dart';
 import 'package:apple_sign_in/apple_sign_in.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   group('performRequests', () {
     const MethodChannel channel = MethodChannel('dev.gilder.tom/apple_sign_in');
 

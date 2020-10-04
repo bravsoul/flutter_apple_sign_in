@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 /// A type for the authorization button.
-enum ButtonType { defaultButton, continueButton, signIn }
+enum ASIButtonType { defaultButton, continueButton, signIn }
 
 /// A style for the authorization button.
-enum ButtonStyle { black, whiteOutline, white }
+enum ASIButtonStyle { black, whiteOutline, white }
 
 /// A button for Sign in With Apple
 class AppleSignInButton extends StatefulWidget {
@@ -14,18 +14,18 @@ class AppleSignInButton extends StatefulWidget {
   final VoidCallback onPressed;
 
   /// A type for the authorization button.
-  final ButtonType type;
+  final ASIButtonType type;
 
   /// A style for the authorization button.
-  final ButtonStyle style;
+  final ASIButtonStyle style;
 
   /// A custom corner radius to be used by this button.
   final double cornerRadius;
 
   const AppleSignInButton({
     this.onPressed,
-    this.type = ButtonType.defaultButton,
-    this.style = ButtonStyle.white,
+    this.type = ASIButtonType.defaultButton,
+    this.style = ASIButtonStyle.white,
     this.cornerRadius = 6,
   })  : assert(type != null),
         assert(style != null),
@@ -41,11 +41,11 @@ class _AppleSignInButtonState extends State<AppleSignInButton> {
   @override
   Widget build(BuildContext context) {
     final bgColor =
-        widget.style == ButtonStyle.black ? Colors.black : Colors.white;
+        widget.style == ASIButtonStyle.black ? Colors.black : Colors.white;
     final textColor =
-        widget.style == ButtonStyle.black ? Colors.white : Colors.black;
+        widget.style == ASIButtonStyle.black ? Colors.white : Colors.black;
     final borderColor =
-        widget.style == ButtonStyle.white ? Colors.white : Colors.black;
+        widget.style == ASIButtonStyle.white ? Colors.white : Colors.black;
 
     return GestureDetector(
       onTapDown: (_) => setState(() => _isTapDown = true),
@@ -86,7 +86,7 @@ class _AppleSignInButtonState extends State<AppleSignInButton> {
               ),
             ),
             Text(
-              widget.type == ButtonType.continueButton
+              widget.type == ASIButtonType.continueButton
                   ? 'Continue with Apple'
                   : 'Sign in with Apple',
               style: TextStyle(

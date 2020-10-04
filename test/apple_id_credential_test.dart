@@ -4,6 +4,7 @@ import 'package:apple_sign_in/apple_id_credential.dart';
 import 'package:apple_sign_in/apple_sign_in.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   group('AppleIdCredential', () {
     test('Creates from map', () async {
       final map = {
