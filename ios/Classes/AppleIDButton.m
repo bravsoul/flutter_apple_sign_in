@@ -50,11 +50,11 @@
 }
 
 - (ASAuthorizationAppleIDButtonType)buttonTypeFromString:(NSString*)asiButtonType {
-    if ([buttonType isEqualToString:@"ASIButtonType.continueButton"]) {
+    if ([asiButtonType isEqualToString:@"ASIButtonType.continueButton"]) {
         return ASAuthorizationAppleIDButtonTypeContinue;
     }
     
-    if ([buttonType isEqualToString:@"ASIButtonType.signIn"]) {
+    if ([asiButtonType isEqualToString:@"ASIButtonType.signIn"]) {
         return ASAuthorizationAppleIDButtonTypeSignIn;
     }
     
